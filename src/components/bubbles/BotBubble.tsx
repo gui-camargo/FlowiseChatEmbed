@@ -203,7 +203,7 @@ export const BotBubble = (props: Props) => {
     if (botMessageEl) {
       botMessageEl.innerHTML = Marked.parse(props.message.message);
       botMessageEl.querySelectorAll('a').forEach((link) => {
-        link.target = '_blank';
+        link.target = '_self';
       });
       if (props.message.rating) {
         setRating(props.message.rating);
